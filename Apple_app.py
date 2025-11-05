@@ -91,13 +91,6 @@ elif view == "Charts & Data":
         fig3.update_traces(texttemplate='%{text}%', textposition='outside')
         st.plotly_chart(fig3, use_container_width=True)
 
-    st.markdown("**Tables (raw data)**")
-    st.write("ASP data")
-    st.table(asp_df)
-    st.write("Rev mix 2015")
-    st.table(rev_mix_2015)
-    st.write("Rev mix 2024")
-    st.table(rev_mix_2024)
 
 elif view == "Learnings":
     st.header("Three Key Learnings (Case → Strategy)")

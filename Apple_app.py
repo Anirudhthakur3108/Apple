@@ -57,7 +57,8 @@ if view == "Overview":
     st.write("- Heavy dependence on iPhone (~69% revenue)")
     st.write("- Slowing iPad & iPod")
     st.write("- New ecosystem plays (Watch, Pay), fierce competition (Samsung premium, Xiaomi low-cost).")
-    st.markdown("Strategy questions then: How to reduce product concentration risk, keep innovation velocity, and sustain margins in price-sensitive markets like India?")
+    st.markdown("Strategy questions then: 
+    How to reduce product concentration risk, keep innovation velocity, and sustain margins in price-sensitive markets like India?")
     st.markdown("**2024 (Outcome highlights):**")
     st.write("- iPhone remains core but Services and Wearables have materially grown")
     st.write("- Apple Silicon improved margin control and product differentiation")

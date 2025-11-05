@@ -53,10 +53,10 @@ timeline_items = [
 # ---------- Views ----------
 if view == "Overview":
     st.header("Overview — 2015 crossroad and 2024 outcomes")
-        st.markdown("**2024 (Outcome highlights):**")
-        st.write("- iPhone remains core but Services and Wearables have materially grown")
-        st.write("- Apple Silicon improved margin control and product differentiation")
-        st.write("- Services (App Store, Music, TV+, iCloud, Fitness+) provide recurring, high-margin revenue")
+    st.markdown("**2024 (Outcome highlights):**")
+    st.write("- iPhone remains core but Services and Wearables have materially grown")
+    st.write("- Apple Silicon improved margin control and product differentiation")
+    st.write("- Services (App Store, Music, TV+, iCloud, Fitness+) provide recurring, high-margin revenue")
 
     
         

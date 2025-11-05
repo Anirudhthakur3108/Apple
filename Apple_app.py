@@ -53,11 +53,6 @@ timeline_items = [
 # ---------- Views ----------
 if view == "Overview":
     st.header("Overview — 2015 crossroad and 2024 outcomes")
-    st.markdown("""
-        **2015 (Case):** heavy dependence on iPhone (~69% revenue), slowing iPad & iPod, new ecosystem plays (Watch, Pay), fierce competition (Samsung premium, Xiaomi low-cost).  
-        
-        **Strategy questions then:** How to reduce product concentration risk, keep innovation velocity, and sustain margins in price-sensitive markets like India?
-        """)
         st.markdown("**2024 (Outcome highlights):**")
         st.write("- iPhone remains core but Services and Wearables have materially grown")
         st.write("- Apple Silicon improved margin control and product differentiation")

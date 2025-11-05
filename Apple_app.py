@@ -44,8 +44,8 @@ rev_mix_2015 = pd.DataFrame({
 })
 
 rev_mix_2025 = pd.DataFrame({
-    "segment": ["Hardware (all)", "Services", "Wearables & Home"],
-    "share": [60, 28, 12]
+    "segment": ["iPhone", "Services", "Wearables,Home & Accessories","Mac","iPad"],
+    "share": [51, 25, 9, 8, 7]
 })
 
 timeline_items = [

@@ -11,21 +11,13 @@ st.markdown("An interactive, lightweight briefing that maps the 2015 Harvard cas
 
 # ---------- Key Financial Snapshot (editable) ----------
 st.markdown("### FY 2024 Key Financial Figures (editable)")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3,= st.columns(3)
 with col1:
-    revenue = st.number_input("Annual Revenue (US$ bn)", value=391.0, step=1.0, format="%.1f")
+    revenue = st.metric("Annual Revenue (US$ bn)", "391")
 with col2:
-    net_income = st.number_input("Net Income (US$ bn)", value=93.7, step=0.1, format="%.1f")
+    net_income = st.metric("Net Income (US$ bn)", "93.7")
 with col3:
-    q4_rev = st.number_input("Q4 2024 Revenue (US$ bn)", value=94.9, step=0.1, format="%.1f")
-with col4:
-    services_pct = st.number_input("Services % of Revenue (approx)", value=28.0, step=0.5, format="%.1f")
-
-st.markdown(f"""
-**Quick summary:**  
-- Revenue: **US$ {revenue:.1f} bn** • Net income: **US$ {net_income:.1f} bn**  
-- Q4 2024 revenue: **US$ {q4_rev:.1f} bn** • Services ≈ **{services_pct:.1f}%** of revenue
-""")
+    q4_rev = st.metric("Q4 2024 Revenue (US$ bn)","94.9")
 
 st.divider()
 
@@ -61,7 +53,7 @@ timeline_items = [
 # ---------- Views ----------
 if view == "Overview":
     st.header("Overview — 2015 crossroad and 2024 outcomes")
-    colA, colB = st.columns([2,1])
+    colA, = st.columns([2,1])
     with colA:
         st.markdown("""
         **2015 (Case):** heavy dependence on iPhone (~69% revenue), slowing iPad & iPod, new ecosystem plays (Watch, Pay), fierce competition (Samsung premium, Xiaomi low-cost).  
@@ -72,11 +64,6 @@ if view == "Overview":
         st.write("- iPhone remains core but Services and Wearables have materially grown")
         st.write("- Apple Silicon improved margin control and product differentiation")
         st.write("- Services (App Store, Music, TV+, iCloud, Fitness+) provide recurring, high-margin revenue")
-    with colB:
-        st.subheader("Quick Evidence")
-        st.metric("FY 2024 Revenue (US$ bn)", f"{revenue:.1f}")
-        st.metric("FY 2024 Net Income (US$ bn)", f"{net_income:.1f}")
-        st.metric("Estimated Services %", f"{services_pct:.1f}%")
 
 elif view == "Timeline":
     st.header("Strategic Timeline (2015 → 2024)")

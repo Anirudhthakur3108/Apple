@@ -53,7 +53,7 @@ timeline_items = [
 # ---------- Views ----------
 if view == "Overview":
     st.header("Overview — 2015 crossroad and 2024 outcomes")
-    colA = st.columns([2,1])
+    colA = st.columns(1)
     with colA:
         st.markdown("""
         **2015 (Case):** heavy dependence on iPhone (~69% revenue), slowing iPad & iPod, new ecosystem plays (Watch, Pay), fierce competition (Samsung premium, Xiaomi low-cost).  

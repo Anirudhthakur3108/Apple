@@ -3,11 +3,11 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(page_title="Apple: 2015→2025 Strategic Brief", layout="wide")
+st.set_page_config(page_title="Apple: 2015→2024 Strategic Brief", layout="wide")
 
 # ---------- Header ----------
-st.title("Apple: 2015 → 2025 — Strategic Evolution (Interactive Brief)")
-st.markdown("An interactive, lightweight briefing that maps the 2015 Harvard case learnings to Apple's actions through 2025.")
+st.title("Apple: 2015 → 2024 — Strategic Evolution (Interactive Brief)")
+st.markdown("An interactive, lightweight briefing that maps the 2015 Harvard case learnings to Apple's actions through 2024.")
 
 # ---------- Key Financial Snapshot (editable) ----------
 st.markdown("### FY 2024 Key Financial Figures (editable)")
@@ -43,7 +43,7 @@ rev_mix_2015 = pd.DataFrame({
     "share": [69, 15, 7, 9]
 })
 
-rev_mix_2025 = pd.DataFrame({
+rev_mix_2024 = pd.DataFrame({
     "segment": ["iPhone", "Services", "Wearables,Home & Accessories","Mac","iPad"],
     "share": [51, 25, 9, 8, 7]
 })
@@ -60,7 +60,7 @@ timeline_items = [
 
 # ---------- Views ----------
 if view == "Overview":
-    st.header("Overview — 2015 crossroad and 2025 outcomes")
+    st.header("Overview — 2015 crossroad and 2024 outcomes")
     colA, colB = st.columns([2,1])
     with colA:
         st.markdown("""
@@ -68,7 +68,7 @@ if view == "Overview":
         
         **Strategy questions then:** How to reduce product concentration risk, keep innovation velocity, and sustain margins in price-sensitive markets like India?
         """)
-        st.markdown("**2025 (Outcome highlights):**")
+        st.markdown("**2024 (Outcome highlights):**")
         st.write("- iPhone remains core but Services and Wearables have materially grown")
         st.write("- Apple Silicon improved margin control and product differentiation")
         st.write("- Services (App Store, Music, TV+, iCloud, Fitness+) provide recurring, high-margin revenue")
@@ -91,16 +91,16 @@ elif view == "Charts & Data":
     fig.update_layout(yaxis_title="ASP (US$)")
     st.plotly_chart(fig, use_container_width=True)
 
-    st.subheader("Revenue Mix — toggle between 2015 and 2025")
-    choice = st.radio("Select year", options=["2015", "2025"], index=0)
+    st.subheader("Revenue Mix — toggle between 2015 and 2024")
+    choice = st.radio("Select year", options=["2015", "2024"], index=0)
     if choice == "2015":
         fig2 = px.bar(rev_mix_2015, x="share", y="segment", orientation="h", text="share",
                       labels={"share":"% of Revenue","segment":"Segment"}, title="Revenue Mix — 2015 (case)")
         fig2.update_traces(texttemplate='%{text}%', textposition='outside')
         st.plotly_chart(fig2, use_container_width=True)
     else:
-        fig3 = px.bar(rev_mix_2025, x="share", y="segment", orientation="h", text="share",
-                      labels={"share":"% of Revenue","segment":"Segment"}, title="Revenue Mix — 2025 (illustrative)")
+        fig3 = px.bar(rev_mix_2024, x="share", y="segment", orientation="h", text="share",
+                      labels={"share":"% of Revenue","segment":"Segment"}, title="Revenue Mix — 2024 (illustrative)")
         fig3.update_traces(texttemplate='%{text}%', textposition='outside')
         st.plotly_chart(fig3, use_container_width=True)
 
@@ -109,8 +109,8 @@ elif view == "Charts & Data":
     st.table(asp_df)
     st.write("Rev mix 2015")
     st.table(rev_mix_2015)
-    st.write("Rev mix 2025")
-    st.table(rev_mix_2025)
+    st.write("Rev mix 2024")
+    st.table(rev_mix_2024)
 
 elif view == "Learnings":
     st.header("Three Key Learnings (Case → Strategy)")
